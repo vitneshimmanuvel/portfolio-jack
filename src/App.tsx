@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Lenis from 'lenis';
 import { PixelLoader } from './components/PixelLoader';
+import { InteractivePixelGrid } from './components/InteractivePixelGrid';
 import { FloatingSocials } from './components/FloatingSocials';
 import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
@@ -37,6 +38,9 @@ export function App() {
 
   return (
     <main className="relative min-h-screen w-full bg-[#efeff1] text-[#0a0a0a] antialiased overflow-x-hidden">
+      {/* Interactive GLSL Rainbow Chromatic Wave Pixel Grid Background */}
+      <InteractivePixelGrid blockSize={20} />
+
       {/* 2-Second Center-Expanding Pixel Shrink Loader */}
       {isLoaderActive && (
         <PixelLoader
@@ -50,13 +54,15 @@ export function App() {
       <FloatingSocials />
 
       {/* Full Fluid Width Scroll-Revealed Sections */}
-      <HeroSection />
-      <AboutSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <SkillsSection />
-      <EducationSection />
-      <ContactSection />
+      <div className="relative z-10">
+        <HeroSection />
+        <AboutSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <SkillsSection />
+        <EducationSection />
+        <ContactSection />
+      </div>
     </main>
   );
 }
