@@ -4,16 +4,18 @@ export interface Experience {
   period: string;
   location: string;
   type: string;
+  summary: string;
   highlights: string[];
   tech: string[];
 }
 
 export interface Project {
   title: string;
-  subtitle: string;
-  tags: string[];
+  domain: string;
   description: string;
   highlights: string[];
+  contribution: string;
+  tags: string[];
   liveUrl?: string;
   githubUrl?: string;
 }
@@ -24,59 +26,117 @@ export interface SkillCategory {
   skills: string[];
 }
 
+export interface ServiceCapability {
+  title: string;
+  iconName: string;
+  items: string[];
+}
+
 export const PERSONAL_INFO = {
   name: 'Vitnesh Immanuvel',
-  role: 'Full Stack Software Developer',
+  role: 'Full-Stack Software Developer | Web & Mobile Application Developer | AI Solutions Developer',
+  tagline: 'Building Digital Products. Solving Real Problems. Turning Ideas into Applications.',
   phone: '7339121049',
   email: 'vitneshimmanuvel@gmail.com',
+  location: 'Erode, Tamil Nadu, India',
   github: 'https://github.com/vitneshimmanuvel',
   linkedin: 'https://www.linkedin.com/in/vitnesh-immanuvel-712636267/',
   summary:
-    'Full Stack Developer with 1+ year of experience building and shipping web and mobile applications using JavaScript, TypeScript, React, Node.js, Express.js, PostgreSQL, and Flutter. Skilled in developing internal business dashboards, lead management systems, CMS-driven websites, RESTful APIs, authentication, role-based access control (RBAC), CI/CD pipelines via GitHub Actions, and end-to-end production deployment via Vercel and Render.',
+    "I'm Vitnesh Immanuvel, a Full-Stack Software Developer with ~1.5 years of experience building modern web applications, backend APIs, Flutter mobile apps, and AI-powered business solutions—taking products from business requirements and workflows through database design to cloud deployment.",
+  summaryDetail:
+    'Contributed across real-world domains including HR management, real estate, document collaboration, food & beverage CRM, cloud serverless systems, and 3D interior visualization—pairing reliable full-stack engineering with next-generation websites and workflow automation.',
 };
 
 export const STATS = [
-  { label: 'Experience', value: '1+ Yr' },
-  { label: 'Production Apps', value: '3+' },
-  { label: 'Daily Active Users', value: '100+' },
-  { label: 'Error Reduction', value: '40%' },
+  { label: 'Experience', value: '1.5+ Yrs' },
+  { label: 'Featured Projects', value: '7+' },
+  { label: 'Industry Domains', value: '6+' },
+  { label: 'Core Focus', value: 'Web • Mobile • AI' },
 ];
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     title: 'Programming Languages',
     iconName: 'Code',
-    skills: ['JavaScript (ES6+)', 'TypeScript', 'Python', 'SQL'],
+    skills: ['JavaScript', 'Dart', 'SQL', 'HTML5', 'CSS3'],
   },
   {
-    title: 'Frontend & Mobile',
+    title: 'Frontend Development',
     iconName: 'Layout',
-    skills: ['React.js', 'Flutter', 'Vite', 'Tailwind CSS', 'HTML5 / CSS3'],
+    skills: [
+      'React.js',
+      'Vite',
+      'Tailwind CSS',
+      'Responsive Web Development',
+      'Component-Based Architecture',
+      'API Integration',
+      'State Management',
+    ],
   },
   {
-    title: 'Backend & APIs',
+    title: 'Backend Development',
     iconName: 'Server',
-    skills: ['Node.js', 'Express.js', 'RESTful APIs', 'Microservice Patterns'],
+    skills: [
+      'Node.js',
+      'Express.js',
+      'REST API Development',
+      'Backend Application Architecture',
+      'Authentication & Authorization',
+      'Middleware Development',
+      'Third-Party API Integration',
+    ],
   },
   {
-    title: 'Databases & ORM',
+    title: 'Database Technologies',
     iconName: 'Database',
-    skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'GraphQL', 'Prisma ORM'],
+    skills: [
+      'PostgreSQL',
+      'MySQL',
+      'MongoDB',
+      'Database Schema Design',
+      'SQL Queries',
+      'CRUD Operations',
+      'Database Integration',
+    ],
   },
   {
-    title: 'DevOps & CI/CD',
-    iconName: 'GitBranch',
-    skills: ['Git', 'GitHub', 'GitHub Actions', 'CI/CD Automation', 'Vercel', 'Render'],
+    title: 'Mobile Application Development',
+    iconName: 'Smartphone',
+    skills: [
+      'Flutter',
+      'Dart',
+      'Cross-Platform Development',
+      'Firebase Integration',
+      'REST API Integration',
+      'Mobile Application Workflows',
+    ],
   },
   {
-    title: 'Security & Auth',
-    iconName: 'ShieldCheck',
-    skills: ['JWT Authentication', 'bcrypt', 'Role-Based Access Control (RBAC)', 'OAuth Concepts'],
+    title: 'AI & Automation',
+    iconName: 'BrainCircuit',
+    skills: [
+      'AI API Integration',
+      'Large Language Model Integration',
+      'AI-Powered Application Features',
+      'RAG Concepts',
+      'Vector Database Concepts',
+      'Workflow Automation',
+    ],
   },
   {
-    title: 'Cloud & Media',
+    title: 'Cloud & Development Tools',
     iconName: 'Cloud',
-    skills: ['Cloudinary API', 'Google Play Console', 'REST Client (Axios)', 'Linux / Bash'],
+    skills: [
+      'AWS',
+      'Vercel',
+      'Firebase',
+      'Git',
+      'GitHub',
+      'Postman',
+      'Environment Configuration',
+      'Application Deployment',
+      'Domain & Hosting Configuration',
+    ],
   },
 ];
 
@@ -84,86 +144,195 @@ export const EXPERIENCES: Experience[] = [
   {
     role: 'Software Developer',
     company: 'Settlo Tech Solutions',
-    period: 'May 2025 – Present',
+    period: 'May 2025 – Nov 2026',
     location: 'Erode, Tamil Nadu, India',
-    type: 'On-site',
+    type: 'Full-Time • ~1.5 Years',
+    summary:
+      'Worked on full-stack software development involving web applications, mobile applications, backend systems, database integration, AI-powered features, and business-oriented platforms.',
     highlights: [
-      'Serve as tech lead on a location-intelligence product, guiding technical decisions and mentoring team members on delivery timelines.',
-      'Developed and deployed 3+ full-stack web applications using React, Node.js, Express.js, and PostgreSQL, serving 100+ daily active users.',
-      'Built secure RESTful APIs with JWT authentication, RBAC, and Prisma ORM for high-reliability database operations.',
-      'Developed cross-platform mobile applications using Flutter and integrated them with backend micro-APIs.',
-      'Implemented automated CI/CD pipelines using GitHub Actions integrated with Vercel and Render for frictionless zero-downtime deployments.',
-      'Owned application debugging, automated testing, and production issue resolution, reducing deployment failures by 30%.',
+      'Developed responsive frontend applications using React.js, JavaScript, HTML5, CSS3, and Tailwind CSS.',
+      'Built backend REST APIs and scalable application services using Node.js and Express.js.',
+      'Designed and integrated SQL databases (PostgreSQL, MySQL) and MongoDB for reliable application data management.',
+      'Translated business requirements and operational workflows into complete full-stack application modules.',
+      'Contributed to cross-platform Flutter mobile application development and backend REST API integration.',
+      'Implemented authentication, role-based user permissions, and secure application access management.',
+      'Integrated Firebase, AWS cloud services, and third-party APIs across production business solutions.',
+      'Managed production deployment, domain/hosting configuration, and environment setup using Git and GitHub.',
+      'Worked on AI integrations and explored LLM-powered application features and workflow automation.',
+      'Handled end-to-end development responsibilities and ownership across multiple concurrent business projects.',
     ],
-    tech: ['React', 'Node.js', 'Express.js', 'PostgreSQL', 'Prisma', 'Flutter', 'GitHub Actions', 'Vercel', 'Render'],
-  },
-  {
-    role: 'Junior Software Engineer (Intern)',
-    company: 'VTS Enterprises India Pvt. Ltd.',
-    period: 'Jul 2024 – Feb 2025',
-    location: 'Chennai, Tamil Nadu, India',
-    type: 'On-site',
-    highlights: [
-      'Built and delivered features across 4+ web and mobile projects in an Agile/Scrum engineering environment.',
-      'Gained hands-on experience with cloud-based deployment workflows and server infrastructure management.',
-      'Collaborated closely with cross-functional engineering teams on client and internal products from architectural development through release.',
+    tech: [
+      'React.js',
+      'JavaScript',
+      'Tailwind CSS',
+      'Node.js',
+      'Express.js',
+      'PostgreSQL',
+      'MongoDB',
+      'Flutter',
+      'Firebase',
+      'AWS',
+      'AI APIs',
+      'Git & GitHub',
     ],
-    tech: ['JavaScript', 'React', 'Node.js', 'PostgreSQL', 'Agile / Scrum', 'Cloud Deployment'],
   },
 ];
 
 export const PROJECTS: Project[] = [
   {
-    title: 'Internal Lead & Operations Dashboard',
-    subtitle: 'Centralized CRM & Pipeline Management',
-    tags: ['React.js', 'Node.js', 'Express.js', 'PostgreSQL', 'Prisma ORM', 'JWT'],
+    title: 'Settlo HR Management Platform',
+    domain: 'Human Resources / Business Management',
     description:
-      'Engineered an enterprise-grade dashboard managing 500+ active leads/month with fully configurable pipelines, custom fields, and real-time stage tracking.',
+      'A web-based HR management platform designed to organize employee information, company operations, HR policies, and multi-role administrative workflows.',
     highlights: [
-      'Implemented robust Role-Based Access Control (RBAC) for Admin, Manager, and Visitor roles with stateless JWT verification.',
-      'Integrated lead activity logs, audit note tracking, duplicate detection, and automated data validation.',
-      'Decreased manual business data entry errors by 40% across internal operations.',
+      'Employee & company/organization management modules',
+      'Multiple user roles, access control & HR policy management',
+      'End-to-end administrative workflows with database-driven backend integration',
+    ],
+    contribution: 'Full-stack application development and implementation of business-specific modules.',
+    tags: ['React.js', 'JavaScript', 'Node.js', 'Express.js', 'PostgreSQL'],
+  },
+  {
+    title: 'PropertyDocks',
+    domain: 'Real Estate / Property Technology',
+    description:
+      'A property-focused digital platform designed to simplify property discovery and connect users with property opportunities through a zero-brokerage approach.',
+    highlights: [
+      'Property listing, discovery & property information management',
+      'Responsive user-facing web interfaces and structured application workflows',
+      'Full backend API integration and production deployment on Vercel',
+    ],
+    contribution: 'Application development and implementation of property-related features.',
+    tags: ['JavaScript', 'React.js', 'Backend APIs', 'Vercel'],
+    liveUrl: 'https://propertydocks.com',
+  },
+  {
+    title: 'Liblist',
+    domain: 'Document Management / Productivity',
+    description:
+      'A document-focused productivity application designed around structured document management, notes, annotations, and collaboration workflows.',
+    highlights: [
+      'Document management, notes & annotations workflows',
+      'Seamless frontend and backend data synchronization',
+      'Scalable application data management deployed on Vercel',
+    ],
+    contribution: 'Frontend and backend development, application module implementation, and ongoing product development.',
+    tags: ['React.js', 'Node.js', 'Express.js', 'Database Integration', 'Vercel'],
+  },
+  {
+    title: 'Donmar Food',
+    domain: 'Food & Beverage / Business Operations',
+    description:
+      'A business-oriented digital solution built to support food and beverage product operations and streamlined information workflows.',
+    highlights: [
+      'Business-focused digital operations & product information management',
+      'Application and service integrations for operational process support',
+      'Reliable technical workflow implementation tailored to domain needs',
+    ],
+    contribution: 'Software development and technical implementation.',
+    tags: ['Business Workflows', 'Product Management', 'Service Integrations'],
+  },
+  {
+    title: 'U-Turn Application',
+    domain: 'Business Application / Cloud-Based Services',
+    description:
+      'A cloud-connected business application leveraging serverless backend services, scalable NoSQL storage, and AWS cloud event integrations.',
+    highlights: [
+      'Backend services built with Node.js and AWS Lambda runtime',
+      'NoSQL data storage and object media handling with DynamoDB and Amazon S3',
+      'Automated event messaging and notifications using Amazon SNS',
+    ],
+    contribution: 'Backend development and integration of cloud-based services.',
+    tags: ['Node.js', 'AWS Lambda', 'DynamoDB', 'Amazon S3', 'Amazon SNS'],
+  },
+  {
+    title: 'Thambi Oru Tea',
+    domain: 'Food & Beverage / Mobile Application',
+    description:
+      'A dedicated mobile application and CRM solution engineered to support food & beverage operations and customer relationship workflows.',
+    highlights: [
+      'Cross-platform mobile application development',
+      'Integrated CRM workflows and backend API synchronization',
+      'End-to-end application testing and production deployment',
+    ],
+    contribution: 'Application development and deployment.',
+    tags: ['Flutter', 'CRM Workflows', 'Backend Integration', 'Deployment'],
+  },
+  {
+    title: 'Home Interiors / 3D Studio',
+    domain: 'Interior Design / Visualization',
+    description:
+      'An interactive interior design visualization experience enabling image-based room selection, color customization, and 3D Studio product workflows.',
+    highlights: [
+      'Home interior visualization and interactive selected-image workflows',
+      'Real-time color customization and visual product selection',
+      '3D Studio-oriented frontend interactivity and customization engine',
+    ],
+    contribution: 'Development of frontend functionality and customization workflows.',
+    tags: ['3D Studio', 'Visualization', 'Color Customization', 'Frontend Workflows'],
+  },
+];
+
+export const WHAT_I_BUILD: ServiceCapability[] = [
+  {
+    title: 'Custom Web Applications',
+    iconName: 'Layout',
+    items: [
+      'Astounding business websites',
+      'Admin dashboards & SaaS apps',
+      'Customer portals & management systems',
     ],
   },
   {
-    title: 'Digital Record Management Platform',
-    subtitle: 'Multi-Register Business Record Platform & Android App',
-    tags: ['React', 'TypeScript', 'Node.js', 'Express.js', 'PostgreSQL', 'Prisma ORM', 'Flutter'],
-    description:
-      'Developed a centralized cloud record management platform featuring multi-register data architecture, robust backup systems, and mobile companion app.',
-    highlights: [
-      'Implemented high-speed Excel/PDF data import-export, automated backups, and soft-delete recycle-bin architecture for 1,000+ business records.',
-      'Architected granular RBAC for secure multi-tenant data access control.',
-      'Built and packaged cross-platform mobile application for Android distributed via Google Play Console.',
+    title: 'Backend & Cloud APIs',
+    iconName: 'Server',
+    items: [
+      'REST APIs & authentication systems',
+      'SQL & NoSQL database architecture',
+      'AWS, Firebase & third-party services',
     ],
   },
   {
-    title: 'Sparkling Events — Dynamic CMS & Event Platform',
-    subtitle: 'Full-Stack Showcase & Media Management CMS',
-    tags: ['React', 'Node.js', 'Express.js', 'PostgreSQL', 'Cloudinary API', 'JWT', 'CI/CD'],
-    description:
-      'Engineered a high-performance modern web application featuring dynamic event showcase components, custom pricing calculators, and responsive visual galleries.',
-    highlights: [
-      'Built a centralized administrative panel with secure JWT/RBAC for dynamic content, pricing tier updates, and real-time gallery management.',
-      'Designed a Node.js/Express backend with PostgreSQL database and Cloudinary API for high-resolution media compression and uploads.',
-      'Deployed via Vercel with automated GitHub Actions CI/CD pipelines enabling zero-downtime content publishing.',
+    title: 'Mobile & AI Solutions',
+    iconName: 'BrainCircuit',
+    items: [
+      'Cross-platform Flutter mobile apps',
+      'AI / LLM API & document tools',
+      'HR, CRM & workflow automation',
     ],
-    liveUrl: 'https://sparklingentertainments.in',
   },
+];
+
+export const DEVELOPMENT_APPROACH = [
+  { step: '01', title: 'Requirement Understanding', desc: 'Understand business goals, users & expected workflows.' },
+  { step: '02', title: 'Planning', desc: 'Define architecture, application modules & technical stack.' },
+  { step: '03', title: 'Development', desc: 'Build clean frontend, backend APIs & database schemas.' },
+  { step: '04', title: 'Integration', desc: 'Connect APIs, databases, cloud & third-party services.' },
+  { step: '05', title: 'Testing', desc: 'Validate workflows, edge cases & system reliability.' },
+  { step: '06', title: 'Deployment', desc: 'Configure domains, environments & cloud hosting.' },
+  { step: '07', title: 'Maintenance', desc: 'Monitor, optimize & extend features as products scale.' },
+];
+
+export const WHY_WORK_WITH_ME = [
+  'End-to-end full-stack ownership across web, backend & Flutter mobile',
+  '1.5+ years building real-world apps across HR, Real Estate, Docs, Food & Cloud',
+  'Strong SQL (PostgreSQL, MySQL) & NoSQL (MongoDB, DynamoDB, Firebase) skills',
+  'Practical AI / LLM integration & technical workflow automation experience',
+  'Business-first engineering mindset focused on clean execution & continuous growth',
 ];
 
 export const EDUCATION = {
   degree: 'Bachelor of Engineering — Computer Science and Engineering',
-  institution: 'Builders Engineering College',
-  period: '2021 – 2025',
-  cgpa: '7.2 / 10',
+  institution: 'Builders Engineering College (Kangeyam Group of Institutions)',
+  affiliation: 'Anna University Affiliated Institution',
+  graduated: 'May 2025',
+  objective:
+    'I aim to grow as a strong software engineer by building scalable applications, strengthening system design and engineering fundamentals, collaborating with talented teams, and taking ownership of challenging real-world technical problems.',
 };
 
-export const INTERESTS = [
-  'Ball Pen Art',
-  'Video Editing',
-  'AI-Assisted Development',
-  'Backend Architecture',
-  'Cloud & Application Deployment',
-  'Exploring New Technologies',
+export const AVAILABILITY_MODES = [
+  'Full-Time Opportunities',
+  'Freelance Projects',
+  'Contract Development',
+  'Technical Collaboration',
 ];

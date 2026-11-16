@@ -5,7 +5,7 @@ import { GithubIcon, LinkedinIcon } from './Icons';
 
 export const FloatingSocials: React.FC = () => {
   return (
-    <aside className="fixed right-4 sm:right-6 md:right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-3 select-none">
+    <aside className="fixed right-4 sm:right-6 md:right-8 top-1/2 -translate-y-1/2 z-40 flex flex-col items-center gap-3 select-none">
       {/* Vertical decorative line */}
       <div className="w-[1px] h-12 bg-gradient-to-b from-transparent via-[#0a0a0a]/30 to-[#0a0a0a]/60" />
 

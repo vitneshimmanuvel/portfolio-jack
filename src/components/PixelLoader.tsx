@@ -24,6 +24,11 @@ export const PixelLoader: React.FC<PixelLoaderProps> = ({
 }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [isVisible, setIsVisible] = useState(true);
+  const onCompleteRef = useRef(onComplete);
+
+  useEffect(() => {
+    onCompleteRef.current = onComplete;
+  }, [onComplete]);
 
   const startAnimation = useCallback(() => {
     const canvas = canvasRef.current;
@@ -118,7 +123,7 @@ export const PixelLoader: React.FC<PixelLoaderProps> = ({
       } else {
         setTimeout(() => {
           setIsVisible(false);
-          if (onComplete) onComplete();
+          if (onCompleteRef.current) onCompleteRef.current();
         }, 50);
       }
     };
@@ -129,10 +134,9 @@ export const PixelLoader: React.FC<PixelLoaderProps> = ({
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener('resize', resize);
     };
-  }, [duration, blockSize, onComplete]);
+  }, [duration, blockSize]);
 
   useEffect(() => {
-    setIsVisible(true);
     const cleanup = startAnimation();
     return cleanup;
   }, [startAnimation]);

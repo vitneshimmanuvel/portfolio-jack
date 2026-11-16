@@ -1,9 +1,19 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { SKILL_CATEGORIES } from '../data/portfolioData';
-import { Code, Layout, Server, Database, GitBranch, ShieldCheck, Cloud } from 'lucide-react';
+import {
+  BrainCircuit,
+  Cloud,
+  Code,
+  Database,
+  GitBranch,
+  Layout,
+  Server,
+  ShieldCheck,
+  Smartphone,
+} from 'lucide-react';
 
-const iconMap: Record<string, React.ElementType> = {
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Code,
   Layout,
   Server,
@@ -11,11 +21,16 @@ const iconMap: Record<string, React.ElementType> = {
   GitBranch,
   ShieldCheck,
   Cloud,
+  Smartphone,
+  BrainCircuit,
 };
 
 export const SkillsSection: React.FC = () => {
   return (
-    <section id="skills" className="min-h-screen py-28 px-6 sm:px-12 md:px-20 lg:px-24 w-full flex flex-col justify-center border-t border-[#d8d8dc]">
+    <section
+      id="skills"
+      className="min-h-screen py-28 px-6 sm:px-12 md:px-20 lg:px-24 w-full flex flex-col justify-center border-t border-[#d8d8dc]"
+    >
       <div className="space-y-16 w-full">
         {/* Big Title */}
         <div className="overflow-hidden">
@@ -27,7 +42,7 @@ export const SkillsSection: React.FC = () => {
             className="font-heading font-black text-5xl sm:text-7xl md:text-8xl tracking-tight text-[#0a0a0a] uppercase leading-none"
           >
             Technical <br />
-            Stack
+            Expertise
           </motion.h2>
         </div>
 

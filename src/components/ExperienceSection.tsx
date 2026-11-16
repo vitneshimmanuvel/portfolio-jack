@@ -1,11 +1,14 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { EXPERIENCES } from '../data/portfolioData';
-import { MapPin, Calendar, CheckCircle2 } from 'lucide-react';
+import { MapPin, Calendar, CheckCircle2, Briefcase } from 'lucide-react';
 
 export const ExperienceSection: React.FC = () => {
   return (
-    <section id="experience" className="min-h-screen py-28 px-6 sm:px-12 md:px-20 lg:px-24 w-full flex flex-col justify-center border-t border-[#d8d8dc]">
+    <section
+      id="experience"
+      className="min-h-screen py-28 px-6 sm:px-12 md:px-20 lg:px-24 w-full flex flex-col justify-center border-t border-[#d8d8dc]"
+    >
       <div className="space-y-16 w-full">
         {/* Big Title with Bidirectional Reveal */}
         <div className="overflow-hidden">
@@ -16,7 +19,7 @@ export const ExperienceSection: React.FC = () => {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="font-heading font-black text-5xl sm:text-7xl md:text-8xl tracking-tight text-[#0a0a0a] uppercase leading-none"
           >
-            Work <br />
+            Professional <br />
             Experience
           </motion.h2>
         </div>
@@ -34,16 +37,19 @@ export const ExperienceSection: React.FC = () => {
             >
               {/* Card Header */}
               <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 border-b border-[#ececef] pb-8">
-                <div className="space-y-1.5">
+                <div className="space-y-2">
                   <h3 className="font-heading font-black text-2xl sm:text-4xl text-[#0a0a0a]">
                     {exp.role}
                   </h3>
                   <p className="text-base sm:text-lg font-medium text-[#444444]">
                     {exp.company}
                   </p>
+                  <p className="text-sm text-[#555555] max-w-3xl leading-relaxed">
+                    {exp.summary}
+                  </p>
                 </div>
 
-                <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-[#555555]">
+                <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-[#555555] shrink-0">
                   <div className="flex items-center gap-2 bg-[#f4f4f6] px-4 py-2 rounded-full border border-[#e2e2e6]">
                     <Calendar className="w-3.5 h-3.5 text-[#0a0a0a]" />
                     <span>{exp.period}</span>
@@ -51,6 +57,10 @@ export const ExperienceSection: React.FC = () => {
                   <div className="flex items-center gap-2 bg-[#f4f4f6] px-4 py-2 rounded-full border border-[#e2e2e6]">
                     <MapPin className="w-3.5 h-3.5 text-[#0a0a0a]" />
                     <span>{exp.location}</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-[#0a0a0a] text-white px-4 py-2 rounded-full">
+                    <Briefcase className="w-3.5 h-3.5" />
+                    <span>{exp.type}</span>
                   </div>
                 </div>
               </div>
